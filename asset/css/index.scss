@@ -1,0 +1,254 @@
+/* cmd . >> scss --watch -E UTF-8 .:. */
+/* scss --style compact style.css:style.css */
+/* scss --style expended style.css:style.css */
+/* scss --style compressed style.css:style.css */
+
+@import "_common";
+
+@mixin move($aniName, $time) {
+    animation: $aniName $time linear infinite;
+}
+
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    @include gradient(#b3a2c7, #f2dbdb);
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .menu_btn {
+        @include menu;
+        span {
+            font-family: $fontE;
+            color: #604a7b;
+            text-transform: uppercase;
+            font-size: 1.111em;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 10;
+            &:after {
+                content: '';
+                width: 100%;
+                height: 3px;
+                display: block;
+                background: #604a7b;
+                margin-top: 3px;
+            }
+        }
+    }
+    .menu_box {
+        position: absolute;
+        top: 100vh;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+        transition: 0.5s;
+        visibility: hidden;
+        z-index: 20;
+        &.on {
+            visibility: visible;
+            top: 0;
+        }
+        span {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            img {
+                width:170px;
+            }
+        }
+        nav {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            a {
+                font-family: $fontE;
+                text-transform: uppercase;
+                font-size: 7vw;
+                @include gradient(#b3a2c7, #f2dbdb);
+                color: transparent;
+                -webkit-background-clip: text;
+                font-weight: bold;
+                padding: 15px;
+                position: relative;
+                &:nth-of-type(1) {
+                    margin-top: 100px;
+                }
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 0;
+                    height: 1px;
+                    background: #f0f;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    z-index: -10;
+                    transition: .5s;
+                }
+                &:hover:before {
+                    width: 100%;
+                }
+            }
+        }
+        .close_box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            cursor: pointer;
+            span {
+                position: absolute;
+                top: 25px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: #fff;
+                &:nth-of-type(1) {
+                    transform: rotate(-45deg)
+                }
+                &:nth-of-type(2) {
+                    transform: rotate(45deg)
+                }
+            }
+        }
+    }
+}
+
+.content_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/back_element.png) no-repeat center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin-top: 5%;
+        .yeons{width:30vw;
+            g path{stroke:#333; fill:none; animation:ani 3s linear forwards; stroke-dasharray:1000; stroke-dashoffset:1000;}
+            g path:nth-of-type(1){ animation-delay: 0s; }
+            g path:nth-of-type(2){ animation-delay: 1.5s; }
+            g path:nth-of-type(3){ animation-delay: 2s; }
+            g path:nth-of-type(4){ animation-delay: 2.5s; }
+            g path:nth-of-type(5){ animation-delay: 2.8s; }
+        }
+    }
+    h2 {
+        font-size: 7vw;
+        font-family: $fontE;
+        padding: 1% 0 5%;
+    }
+    > span {
+        color: #fff;
+        &:nth-of-type(1){
+            display: none;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 0.7em;
+            height: 1em;
+            background: rgba(255,255,255,.5);
+            position: relative;
+            top: 3px;
+            left: 4px;
+            animation: cursor 1s step-end infinite;
+        }
+    }
+    .moving_pol {
+        width: 100%;
+        height: 86%;
+        position: absolute;
+        top: 7%;
+        left: 0;
+        @include move(updown,15s);
+        .circle_1 {
+            position: absolute;
+            top: 30%;
+            right: 25%;
+        }
+        .circle_2 {
+            position: absolute;
+            bottom: 10%;
+            right: 15%;
+        }
+        .tri_1 {
+            position: absolute;
+            bottom: 5%;
+            right: 50%;
+            @include move(rotate1,10s);
+        }
+        .tri_2 {
+            position: absolute;
+            top: 5%;
+            right: 55%;
+            @include move(rotate2,10s);
+        }
+        .snow {
+            position: absolute;
+            top: 40%;
+            left: 15%;
+            @include move(rotate1,10s);
+        }
+        .wave {
+            position: absolute;
+            top: 20%;
+            right: 8%;
+            @include move(rotate1,10s);
+        }
+        .hax {
+            position: absolute;
+            bottom: 25%;
+            left: 25%;
+            @include move(rotate2,10s);
+        }
+    }
+}
+
+
+@keyframes ani{
+    100%{stroke-dashoffset:0;}
+}
+
+
+
+
+@keyframes cursor{
+    0%{opacity:0;}
+    50%{opacity:1;}
+    100%{opacity:0;}
+}
+
+@keyframes updown{
+    0% {top: 7%;}
+    25% {top: 14%;}
+    50% {top: 7%;}
+    75% {top: 0%;}
+    100% {top: 7%;}
+}
+
+@keyframes rotate1{
+    0% {transform: rotate(30deg);}
+    100% {transform: rotate(390deg);}
+}
+
+@keyframes rotate2{
+    0% {transform: rotate(70deg);}
+    100% {transform: rotate(430deg);}
+}

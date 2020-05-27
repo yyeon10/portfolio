@@ -1,0 +1,344 @@
+/* cmd . >> scss --watch -E UTF-8 .:. */
+/* scss --style compact style.css:style.css */
+/* scss --style expended style.css:style.css */
+/* scss --style compressed style.css:style.css */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Gothic', sans-serif, 'Questrial', sans-serif;
+  font-size: 18px;
+  color: #333;
+  box-sizing: border-box; }
+
+ul,
+li {
+  list-style-type: none; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+
+span,
+em,
+strong,
+a,
+small {
+  display: inline-block; }
+
+input,
+textarea {
+  outline-style: none;
+  border: none; }
+
+p {
+  white-space: pre-line; }
+
+.contact_box {
+  position: fixed;
+  width: 55vw;
+  height: 100vh;
+  top: 0;
+  right: -55vw;
+  background: #000;
+  z-index: 30;
+  visibility: hidden;
+  transition: .5s; }
+  .contact_box.on {
+    visibility: visible;
+    right: 0; }
+  .contact_box div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .contact_box div span {
+      margin-top: 3%; }
+      .contact_box div span img {
+        width: 170px; }
+    .contact_box div ul {
+      margin-top: 7%; }
+      .contact_box div ul li {
+        width: 40vw;
+        height: 100%;
+        display: flex;
+        padding: 2vh 0;
+        justify-content: space-between; }
+        .contact_box div ul li input {
+          padding: 30px 40px;
+          width: 48%; }
+        .contact_box div ul li input::placeholder {
+          font-family: "Questrial", sans-serif;
+          color: #ddd; }
+        .contact_box div ul li:nth-of-type(3) textarea {
+          font-family: "Nanum Gothic", sans-serif;
+          width: 100%;
+          height: 200px;
+          padding: 30px 40px;
+          resize: vertical; }
+          .contact_box div ul li:nth-of-type(3) textarea::placeholder {
+            color: #ddd; }
+        .contact_box div ul li:nth-of-type(4) {
+          justify-content: center; }
+          .contact_box div ul li:nth-of-type(4) input {
+            cursor: pointer;
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Questrial", sans-serif;
+            margin-top: 5%;
+            color: #fff; }
+    .contact_box div .close_box {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      cursor: pointer; }
+      .contact_box div .close_box span {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #fff; }
+        .contact_box div .close_box span:nth-of-type(1) {
+          transform: rotate(-45deg); }
+        .contact_box div .close_box span:nth-of-type(2) {
+          transform: rotate(45deg); }
+
+@media (max-width: 1024px) {
+  .contact_box {
+    width: 100%;
+    right: -100vw; }
+    .contact_box div ul li {
+      width: 70vw; }
+      .contact_box div ul li:nth-of-type(4) input {
+        width: 35%; } }
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #b3a2c7, #f2dbdb); }
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  header .menu_btn {
+    position: absolute;
+    top: 5vh;
+    right: 5vw; }
+    header .menu_btn span {
+      font-family: "Questrial", sans-serif;
+      color: #604a7b;
+      text-transform: uppercase;
+      font-size: 1.111em;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 10; }
+      header .menu_btn span:after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        display: block;
+        background: #604a7b;
+        margin-top: 3px; }
+  header .menu_box {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    transition: 0.5s;
+    visibility: hidden;
+    z-index: 20; }
+    header .menu_box.on {
+      visibility: visible;
+      top: 0; }
+    header .menu_box span {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%); }
+      header .menu_box span img {
+        width: 170px; }
+    header .menu_box nav {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      header .menu_box nav a {
+        font-family: "Questrial", sans-serif;
+        text-transform: uppercase;
+        font-size: 7vw;
+        background: linear-gradient(135deg, #b3a2c7, #f2dbdb);
+        color: transparent;
+        -webkit-background-clip: text;
+        font-weight: bold;
+        padding: 15px;
+        position: relative; }
+        header .menu_box nav a:nth-of-type(1) {
+          margin-top: 100px; }
+        header .menu_box nav a:before {
+          content: '';
+          display: inline-block;
+          width: 0;
+          height: 1px;
+          background: #f0f;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          z-index: -10;
+          transition: .5s; }
+        header .menu_box nav a:hover:before {
+          width: 100%; }
+    header .menu_box .close_box {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      cursor: pointer; }
+      header .menu_box .close_box span {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #fff; }
+        header .menu_box .close_box span:nth-of-type(1) {
+          transform: rotate(-45deg); }
+        header .menu_box .close_box span:nth-of-type(2) {
+          transform: rotate(45deg); }
+
+.content_box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/back_element.png) no-repeat center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .content_box h1 {
+    margin-top: 5%; }
+    .content_box h1 .yeons {
+      width: 30vw; }
+      .content_box h1 .yeons g path {
+        stroke: #333;
+        fill: none;
+        animation: ani 3s linear forwards;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000; }
+      .content_box h1 .yeons g path:nth-of-type(1) {
+        animation-delay: 0s; }
+      .content_box h1 .yeons g path:nth-of-type(2) {
+        animation-delay: 1.5s; }
+      .content_box h1 .yeons g path:nth-of-type(3) {
+        animation-delay: 2s; }
+      .content_box h1 .yeons g path:nth-of-type(4) {
+        animation-delay: 2.5s; }
+      .content_box h1 .yeons g path:nth-of-type(5) {
+        animation-delay: 2.8s; }
+  .content_box h2 {
+    font-size: 7vw;
+    font-family: "Questrial", sans-serif;
+    padding: 1% 0 5%; }
+  .content_box > span {
+    color: #fff; }
+    .content_box > span:nth-of-type(1) {
+      display: none; }
+    .content_box > span:after {
+      content: '';
+      display: inline-block;
+      width: 0.7em;
+      height: 1em;
+      background: rgba(255, 255, 255, 0.5);
+      position: relative;
+      top: 3px;
+      left: 4px;
+      animation: cursor 1s step-end infinite; }
+  .content_box .moving_pol {
+    width: 100%;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    animation: updown 15s linear infinite; }
+    .content_box .moving_pol .circle_1 {
+      position: absolute;
+      top: 30%;
+      right: 25%; }
+    .content_box .moving_pol .circle_2 {
+      position: absolute;
+      bottom: 10%;
+      right: 15%; }
+    .content_box .moving_pol .tri_1 {
+      position: absolute;
+      bottom: 5%;
+      right: 50%;
+      animation: rotate1 10s linear infinite; }
+    .content_box .moving_pol .tri_2 {
+      position: absolute;
+      top: 5%;
+      right: 55%;
+      animation: rotate2 10s linear infinite; }
+    .content_box .moving_pol .snow {
+      position: absolute;
+      top: 40%;
+      left: 15%;
+      animation: rotate1 10s linear infinite; }
+    .content_box .moving_pol .wave {
+      position: absolute;
+      top: 20%;
+      right: 8%;
+      animation: rotate1 10s linear infinite; }
+    .content_box .moving_pol .hax {
+      position: absolute;
+      bottom: 25%;
+      left: 25%;
+      animation: rotate2 10s linear infinite; }
+
+@keyframes ani {
+  100% {
+    stroke-dashoffset: 0; } }
+@keyframes cursor {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes updown {
+  0% {
+    top: 7%; }
+  25% {
+    top: 14%; }
+  50% {
+    top: 7%; }
+  75% {
+    top: 0%; }
+  100% {
+    top: 7%; } }
+@keyframes rotate1 {
+  0% {
+    transform: rotate(30deg); }
+  100% {
+    transform: rotate(390deg); } }
+@keyframes rotate2 {
+  0% {
+    transform: rotate(70deg); }
+  100% {
+    transform: rotate(430deg); } }
+
+/*# sourceMappingURL=index.css.map */
