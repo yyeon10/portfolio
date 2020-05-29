@@ -26,9 +26,10 @@
             <input type="checkbox">
             <a data-num="<?=$row['num']?>" class="view">
                 <code><?=$row['num']?></code>
+                <code><?=$row['company']?></code>
                 <code><?=$row['name']?></code>
+                <code><?=$row['tel']?></code>
                 <code><?=$row['email']?></code>
-                <code><?=$row['subject']?></code>
                 <code><?=$row['date']?></code>
             </a>
             <a href="delete.php?num=<?=$row['num']?>" class="del">[삭제]</a>

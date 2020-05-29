@@ -527,9 +527,116 @@ header {
     }
 }
 
-
 @keyframes pieline2 {
     0% {
         stroke-dasharray: 0 158;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content_box {
+        width: 100%;
+        min-width: 1024px;
+        height: 100%;
+        min-height: 1366px;
+    }
+    .profile_box {
+        > li {
+            width: 650px;
+            height: 900px;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            &:nth-of-type(1) {
+                strong {
+                    position: relative;
+                    left: 5%;
+                }
+                > small {
+                    left: -13%;
+                }
+                ul {
+                    top: 45%;
+                        li {
+                        &:nth-of-type(4) {
+                            span:nth-of-type(2) {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+                div {
+                    font-size: 9.5em;
+                    bottom: -6%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        .menu_box {
+            nav {
+                a {
+                    font-size: 10vw;
+                }
+            }
+        }
+    }
+    .content_box {
+        width: 100%;
+        min-width: 768px;
+        height: 100%;
+        min-height: 1024px;
+    }
+    .profile_box {
+        > li {
+            width: 500px;
+            height: 700px;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            &:nth-of-type(1) {
+                strong {
+                    position: relative;
+                    left: 5%;
+                    top: -2%;
+                }
+                > small {
+                    left: -18%;
+                    letter-spacing: 0.2em
+                }
+                background: #fff url(../img/back_dot.png) no-repeat left 27% top 20%;
+                ul {
+                    top: 45%;
+                    right: 5%;
+                    text-align: right;
+                        li {
+                        &:nth-of-type(4) {
+                            span:nth-of-type(2) {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+                div {
+                    font-size: 7.3em;
+                    bottom: -6%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    header {
+        .menu_box {
+            span {
+                img {
+                    width: 130px;
+                }
+            }
+        }
     }
 }

@@ -1,22 +1,23 @@
 <?
-    include_once $_SERVER['DOCUMENT_ROOT']."/admin/admin_check.php";
+    include_once $_SERVER['DOCUMENT_ROOT']."/asset/inc/db.php";
 
 //글 정보 수정
 
+    $company = $_POST['company'];
     $name = $_POST['name'];
-    $subject = $_POST['subject'];
+    $tel = $_POST['tel'];
     $email = $_POST['email'];
     $content = $_POST['content'];
-    $date = date();
+    $date = date('y-m-d');
 
     $query = "insert into contact(
-            name, subject, email, content, date
+            company, name, tel, email, content, date
         ) values (
-            '$name','$subject','$email','$content','$date'
+            '$company','$name','$tel','$email','$content','$date'
         )";
 
     mq($query);
 
-    page('list.php');
+    back('등록되었습니다.');
         
 ?>

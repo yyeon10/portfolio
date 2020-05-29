@@ -14,6 +14,7 @@
     $url = $_POST['url'];
     $img = $_FILES['img'];
     $video = $_FILES['video'];
+    $mediatype = $_POST['mediatype'];
     $state = $_POST['state'];
 
     //file 등록
@@ -31,9 +32,9 @@
    
     if(!isset($_POST['mode'])){
         $query = "insert into project(
-            type, title, worktype, date, summary, content, skill, test, url, img, video, state
+            type, title, worktype, date, summary, content, skill, test, url, img, video, mediatype, state
         ) values (
-           '$type','$title','$worktype','$date','$summary','$content','$skill','$test','$url','$imgDir','$videoDir','$state'
+           '$type','$title','$worktype','$date','$summary','$content','$skill','$test','$url','$imgDir','$videoDir','$mediatype','$state'
         )";
     }else{
         $num = $_POST['num'];

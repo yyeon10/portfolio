@@ -23,6 +23,7 @@
             <li><input type="text" placeholder="프로젝트 링크" name="url"></li>
             <li><input type="file" name="img"></li>
             <li><input type="file" name="video"></li>
+            <li><input type="text" placeholder="웹/모바일" name="mediatype"></li>
             <!-- 프로젝트를 공개하시겠습니까? -->
             <li><input type="checkbox" name="state" checked></li>
             <li><input type="submit" value="ADD PROJECT" class="btn"></li>

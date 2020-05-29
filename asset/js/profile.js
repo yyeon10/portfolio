@@ -10,6 +10,18 @@ $(function () {
     $(window).on('mousewheel DOMMouseScroll', function (e) {
         mousewheel(e);
     });
+    console.log($('.profile_box li'))
+    $('.profile_box > li').eq(0).on('click', function(){
+        $('.profile_box').addClass('on');
+            if (bln) {
+                skill();
+                bln = false;
+            }
+    });
+    
+    $('.profile_box > li').eq(1).on('click', function(){
+        $('.profile_box').removeClass('on');
+    });
 
     function mousewheel(e) {
         if (e.originalEvent.detail === 0) { // 표준브라우저

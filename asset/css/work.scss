@@ -166,20 +166,17 @@ header {
         li {
             padding: 10px 0;
             cursor: pointer;
-            a {
-                color: #fff;
-                font-size: 1.389em;
-                font-weight: 700;
-                transition: .5s;
-            }
+            color: #fff;
+            font-size: 1.389em;
+            font-weight: 700;
+            transition: .5s;
+            
             &.on {
-                a {
-                    font-weight: 800;
-                    font-size: 1.667em;
-                    color: #31859c;
-                    small {
-                        font-weight: bold;
-                    }
+                font-weight: 800;
+                font-size: 1.667em;
+                color: #31859c;
+                small {
+                    font-weight: bold;
                 }
             }
             &:hover {
@@ -194,14 +191,33 @@ header {
         }
     }
     figure {
-        width: 82%;
+        &.on {
+            figcaption {
+                opacity: 1;
+            }
+            .art_img {
+                margin-right: 0;
+            }
+            .line {
+                span {
+                    &:after {
+                        width: 640px;
+                    }
+                }
+            }
+        }
+        width: 85%;
         float: right;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        padding: 0 30px;
+        overflow: hidden;
         figcaption {
+            opacity: 0;
             padding: 20px 0;
             position: relative;
+            transition: .7s;
             > span {
                 background: #333;
                 padding: 7px 20px;
@@ -229,12 +245,13 @@ header {
                     &:after {
                         content: '';
                         display: inline-block;
-                        width: 640px;
+                        width: 0px;
                         height: 3px;
                         background: #333;
                         position: relative;
                         top: 50%;
                         transform: translateY(-50%);
+                        transition: .7s; 
                     }
                 }
             }
@@ -261,6 +278,8 @@ header {
             width: 950px;
             min-width: 950px;
             overflow: hidden;
+            margin-right: -1000px;
+            transition: .7s;
             img {
                 width: 100%;
             }

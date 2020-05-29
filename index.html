@@ -25,7 +25,7 @@
                 <span><img src="asset/img/logo.svg" alt="yeon's"></span>
                 <nav>
                     <a href="profile.html">profile</a>
-                    <a href="work.php?num=1">work</a>
+                    <a href="work.php">work</a>
                     <a href="#">contact</a>
                 </nav>
                 <div class="close_box">
@@ -110,7 +110,8 @@
                 </svg>
            </h1>
             <h2>PORTFOLIO</h2>
-            <span>포트폴리오 페이지에 오신 것을 환영합니다.</span>
+            <span>포트폴리오 페이지에 오신 것을
+            환영합니다.</span>
             <span></span>
             <div class="moving_pol">
                 <div class="circle_1">
@@ -171,21 +172,21 @@
         <section class="contact_box">
             <div>
                 <span><img src="asset/img/logo.svg" alt="yeon's"></span>
-                <form name="contact" action="" method="post">
+                <form name="contact"  method="post" id="contact">
                     <ul>
                         <li>
                             <input type="text" name="company" placeholder="COMPANY">
-                            <input type="text" name="name" placeholder="NAME">
+                            <input type="text" name="name" placeholder="NAME *">
                         </li>
                         <li>
-                            <input type="text" name="tel" placeholder="TEL">
-                            <input type="text" name="email" placeholder="EMAIL">
+                            <input type="text" name="tel" placeholder="TEL *">
+                            <input type="text" name="email" placeholder="EMAIL *">
                         </li>
                         <li>
                             <textarea name="content" placeholder="문의사항을 적어주세요."></textarea>
                         </li>
                         <li>
-                            <input type="submit" value="contact">
+                            <input type="submit" value="contact" id="submit">
                         </li>
                     </ul>
                 </form>

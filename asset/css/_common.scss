@@ -168,3 +168,28 @@ p {
         }
     }
 }
+
+@media (max-width:480px) {
+    .contact_box {
+        div {
+            span {
+                img {
+                    width: 130px;
+                }
+            }
+            ul {
+                li {
+                    padding: 1vh 0;
+                    input {
+                        padding: 15px 15px;
+                    }
+                    &:nth-of-type(4) {
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
