@@ -57,7 +57,7 @@ $(function(){
             $content = $('textarea[name=content]').val();
         
         if($name == ''){
-            alert('성함을 입력해주세요');
+            alert('이름을 입력해주세요');
             $('input[name=name]').focus();
             return;
         }
