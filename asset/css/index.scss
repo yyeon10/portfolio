@@ -1,10 +1,15 @@
 /* cmd . >> scss --watch -E UTF-8 .:. */
+
+
 /* scss --style compact style.css:style.css */
+
+
 /* scss --style expended style.css:style.css */
+
+
 /* scss --style compressed style.css:style.css */
 
 @import "_common";
-
 @mixin move($aniName, $time) {
     animation: $aniName $time linear infinite;
 }
@@ -63,7 +68,7 @@ header {
             left: 50%;
             transform: translateX(-50%);
             img {
-                width:170px;
+                width: 170px;
             }
         }
         nav {
@@ -140,23 +145,40 @@ header {
     align-items: center;
     h1 {
         margin-top: 5%;
-        .yeons{width:30vw;
-            g path{stroke:#333; fill:none; animation:ani 3s linear forwards; stroke-dasharray:1000; stroke-dashoffset:1000;}
-            g path:nth-of-type(1){ animation-delay: 0s; }
-            g path:nth-of-type(2){ animation-delay: 1.5s; }
-            g path:nth-of-type(3){ animation-delay: 2s; }
-            g path:nth-of-type(4){ animation-delay: 2.5s; }
-            g path:nth-of-type(5){ animation-delay: 2.8s; }
+        .yeons {
+            width: 30vw;
+            g path {
+                stroke: #333;
+                fill: none;
+                animation: ani 3s linear forwards;
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+            }
+            g path:nth-of-type(1) {
+                animation-delay: 0s;
+            }
+            g path:nth-of-type(2) {
+                animation-delay: 1.5s;
+            }
+            g path:nth-of-type(3) {
+                animation-delay: 2s;
+            }
+            g path:nth-of-type(4) {
+                animation-delay: 2.5s;
+            }
+            g path:nth-of-type(5) {
+                animation-delay: 2.8s;
+            }
         }
     }
     h2 {
         font-size: 7vw;
         font-family: $fontE;
-        padding: 1% 0 5%;
+        padding: 1% 0 3%;
     }
     > span {
         color: #fff;
-        &:nth-of-type(1){
+        &:nth-of-type(1) {
             display: none;
         }
         &:after {
@@ -164,11 +186,34 @@ header {
             display: inline-block;
             width: 0.7em;
             height: 1em;
-            background: rgba(255,255,255,.5);
+            background: rgba(255, 255, 255, .5);
             position: relative;
             top: 3px;
             left: 4px;
             animation: cursor 1s step-end infinite;
+        }
+    }
+    a {
+        display: none;
+        position: absolute;
+        text-transform: uppercase;
+        bottom: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        width: 200px;
+        height: 70px;
+        border: 3px solid #fff;
+        color: #fff;
+        border-radius: 100px;
+        line-height: 65px;
+        font-family: $fontE;
+        text-align: center;
+        font-weight: bold;
+        transition: background .5s;
+        &:hover {
+            color: #604a7b;
+            background: #fff;
         }
     }
     .moving_pol {
@@ -177,7 +222,7 @@ header {
         position: absolute;
         top: 7%;
         left: 0;
-        @include move(updown,15s);
+        @include move(updown, 15s);
         .circle_1 {
             position: absolute;
             top: 30%;
@@ -192,66 +237,90 @@ header {
             position: absolute;
             bottom: 5%;
             right: 50%;
-            @include move(rotate1,10s);
+            @include move(rotate1, 10s);
         }
         .tri_2 {
             position: absolute;
             top: 5%;
             right: 55%;
-            @include move(rotate2,10s);
+            @include move(rotate2, 10s);
         }
         .snow {
             position: absolute;
             top: 40%;
             left: 15%;
-            @include move(rotate1,10s);
+            @include move(rotate1, 10s);
         }
         .wave {
             position: absolute;
             top: 20%;
             right: 8%;
-            @include move(rotate1,10s);
+            @include move(rotate1, 10s);
         }
         .hax {
             position: absolute;
             bottom: 25%;
             left: 25%;
-            @include move(rotate2,10s);
+            @include move(rotate2, 10s);
         }
     }
 }
 
-
-@keyframes ani{
-    100%{stroke-dashoffset:0;}
+@keyframes ani {
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
-
-@keyframes cursor{
-    0%{opacity:0;}
-    50%{opacity:1;}
-    100%{opacity:0;}
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-@keyframes updown{
-    0% {top: 7%;}
-    25% {top: 14%;}
-    50% {top: 7%;}
-    75% {top: 0%;}
-    100% {top: 7%;}
+@keyframes updown {
+    0% {
+        top: 7%;
+    }
+    25% {
+        top: 14%;
+    }
+    50% {
+        top: 7%;
+    }
+    75% {
+        top: 0%;
+    }
+    100% {
+        top: 7%;
+    }
 }
 
-@keyframes rotate1{
-    0% {transform: rotate(30deg);}
-    100% {transform: rotate(390deg);}
+@keyframes rotate1 {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(390deg);
+    }
 }
 
-@keyframes rotate2{
-    0% {transform: rotate(70deg);}
-    100% {transform: rotate(430deg);}
+@keyframes rotate2 {
+    0% {
+        transform: rotate(70deg);
+    }
+    100% {
+        transform: rotate(430deg);
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     header {
         .menu_box {
             nav {
@@ -261,6 +330,11 @@ header {
             }
         }
     }
+    .content_box {
+        a {
+            bottom: 25%;
+        }
+    }
 }
 
 @media (max-width:480px) {
@@ -268,17 +342,21 @@ header {
         .menu_box {
             span {
                 img {
-                    width:130px;
+                    width: 130px;
                 }
+            }
+            .close_box {
+                width: 40px;
+                height: 40px;
             }
         }
     }
     .content_box {
         background: url(../img/back_element_v.png) no-repeat center center;
         background-size: contain;
-        back
-        h1 {
-            .yeons{width:50vw;
+        back h1 {
+            .yeons {
+                width: 50vw;
             }
         }
         h2 {
@@ -291,5 +369,4 @@ header {
             display: none;
         }
     }
-    
 }

@@ -13,6 +13,7 @@ $(function () {
     console.log($('.profile_box li'))
     $('.profile_box > li').eq(0).on('click', function(){
         $('.profile_box').addClass('on');
+        $('.content_box').addClass('on');
             if (bln) {
                 skill();
                 bln = false;
@@ -21,7 +22,11 @@ $(function () {
     
     $('.profile_box > li').eq(1).on('click', function(){
         $('.profile_box').removeClass('on');
+        $('.content_box').removeClass('on');
     });
+    
+    var liHeight = $('.profile_box > li').innerHeight();
+    console.log(liHeight)
 
     function mousewheel(e) {
         if (e.originalEvent.detail === 0) { // 표준브라우저
@@ -33,9 +38,11 @@ $(function () {
         console.log(direction);
         if (direction < 0) {
             $('.profile_box').removeClass('on');
+            $('.content_box').removeClass('on');
         }
         else {
             $('.profile_box').addClass('on');
+            $('.content_box').addClass('on');
             if (bln) {
                 skill();
                 bln = false;
