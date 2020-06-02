@@ -11,9 +11,6 @@ $(function(){
         $('.content_box figure').removeClass('on');
         setTimeout(function(){
             workData(num);
-            setTimeout(function(){
-                $('.content_box figure').addClass('on');
-            },100);
         },700)
     });
 
@@ -27,6 +24,10 @@ $(function(){
                 $('.content_box figure').remove();
                 $('.content_box').append($(data)[0]);
                 $('.detail_box').html($(data)[1]);
+                setTimeout(function(){
+                    $('.content_box figure').addClass('on');
+                },100)
+                
 
                  $('.content_box figcaption a').on('click', function(e){
                     e.preventDefault();
