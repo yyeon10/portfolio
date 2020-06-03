@@ -37,6 +37,11 @@
                     <a href="work.php">work</a>
                     <a href="#">contact</a>
                 </nav>
+                <p>
+                    <a href="http://validator.kldp.org/check?uri=referer"
+                      onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+                      src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+                </p>
                 <div class="close_box">
                     <span></span>
                     <span></span>

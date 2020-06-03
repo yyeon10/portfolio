@@ -229,6 +229,10 @@ header {
           transition: .5s; }
         header .menu_box nav a:hover:before {
           width: 100%; }
+    header .menu_box p {
+      position: absolute;
+      bottom: 10px;
+      right: 10px; }
     header .menu_box .close_box {
       width: 50px;
       height: 50px;
