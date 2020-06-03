@@ -431,7 +431,7 @@ header {
         z-index: 10; }
       .detail_box figure .detail_img video {
         position: absolute;
-        top: 20px;
+        top: 22px;
         right: 1%;
         width: 98%;
         z-index: 1; }
