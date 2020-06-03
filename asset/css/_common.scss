@@ -21,6 +21,27 @@ sans-serif;
     box-sizing: border-box;
 }
 
+.explore {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    div {
+        color: inherit;
+    }
+    a {
+        color: inherit;
+        font-weight: bold;
+        margin-left: 8px;
+        text-decoration: underline;
+    }
+}
+
 ul,
 li {
     list-style-type: none;

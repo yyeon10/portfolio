@@ -10,6 +10,24 @@
   color: #333;
   box-sizing: border-box; }
 
+.explore {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #fff; }
+  .explore div {
+    color: inherit; }
+  .explore a {
+    color: inherit;
+    font-weight: bold;
+    margin-left: 8px;
+    text-decoration: underline; }
+
 ul,
 li {
   list-style-type: none; }
@@ -126,24 +144,6 @@ p {
       padding: 15px 15px; }
     .contact_box div ul li:nth-of-type(4) input {
       width: 100%; } }
-.explore {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.5em;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  color: #fff; }
-  .explore div {
-    color: inherit; }
-  .explore a {
-    color: inherit;
-    font-weight: bold;
-    margin-left: 8px;
-    text-decoration: underline; }
-
 .wrap {
   width: 100vw;
   height: 100vh;
@@ -261,26 +261,24 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .content_box h1 {
-    margin-top: 5%; }
-    .content_box h1 .yeons {
-      width: 30vw; }
-      .content_box h1 .yeons g path {
-        stroke: #333;
-        fill: none;
-        animation: ani 3s linear forwards;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000; }
-      .content_box h1 .yeons g path:nth-of-type(1) {
-        animation-delay: 0s; }
-      .content_box h1 .yeons g path:nth-of-type(2) {
-        animation-delay: 1.5s; }
-      .content_box h1 .yeons g path:nth-of-type(3) {
-        animation-delay: 2s; }
-      .content_box h1 .yeons g path:nth-of-type(4) {
-        animation-delay: 2.5s; }
-      .content_box h1 .yeons g path:nth-of-type(5) {
-        animation-delay: 2.8s; }
+  .content_box h1 .yeons {
+    width: 30vw; }
+    .content_box h1 .yeons g path {
+      stroke: #333;
+      fill: none;
+      animation: ani 3s linear forwards;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000; }
+    .content_box h1 .yeons g path:nth-of-type(1) {
+      animation-delay: 0s; }
+    .content_box h1 .yeons g path:nth-of-type(2) {
+      animation-delay: 1.5s; }
+    .content_box h1 .yeons g path:nth-of-type(3) {
+      animation-delay: 2s; }
+    .content_box h1 .yeons g path:nth-of-type(4) {
+      animation-delay: 2.5s; }
+    .content_box h1 .yeons g path:nth-of-type(5) {
+      animation-delay: 2.8s; }
   .content_box h2 {
     font-size: 7vw;
     font-family: "Questrial", sans-serif;

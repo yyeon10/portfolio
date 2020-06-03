@@ -1,16 +1,6 @@
 $(function () {
     //start
     
-    var agent = navigator.userAgent.toLowerCase();
-
-    if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
-        
-        var text = "<div class='explore'><div>이 사이트는 크롬 브라우저에 최적화되어있습니다.</div><div>크롬 브라우저로 실행하거나<a href='https://www.google.com/intl/ko/chrome/'>여기</a>에서 브라우저를 다운 받아주세요.</div></div>"
-        $('.wrap').hide();
-        $('body').html(text);
-
-    }
-    
     var typingBool = false;
     var typingIdx = 0;
     var typingTxt = $('.content_box span').eq(0).text(); // 타이핑될 텍스트를 가져온다 
