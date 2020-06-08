@@ -151,9 +151,8 @@ header {
     width: 100%;
     min-width: 1920px;
     height: 100%;
-    min-height: 1080px;
     display: flex;
-    padding: 5% 0 3%;
+    padding: 7% 0 3%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -225,8 +224,8 @@ header {
     }
     > li {
         width: 1150px;
-        height: 650px;
-        min-height: 650px;
+        height: 85%;
+        max-height: 650px;
         background: #fff;
         position: relative;
         overflow: hidden;
@@ -235,7 +234,6 @@ header {
             background-size: 90%;
             border-radius: 0 100px 0 0;
             padding: 0 6%;
-            transform: rotateX(0deg) translateY(0px) translateZ(325px);
             strong {}
             > small {
                 position: absolute;
@@ -290,7 +288,6 @@ header {
         }
         &:nth-of-type(2) {
             transform-origin: center center;
-            transform: rotateX(-90deg) translateY(0) translateZ(325px);
             position: absolute;
             display: flex;
             justify-content: space-between;

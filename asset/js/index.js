@@ -10,6 +10,7 @@ $(function () {
         var tyInt = setInterval(typing, 100); // 반복동작 
     }
     
+    
     setTimeout(function(){
         $('.content_box a').fadeIn();
     },3000)

@@ -9,8 +9,9 @@ $(function () {
     })*/
     $(window).on('mousewheel DOMMouseScroll', function (e) {
         mousewheel(e);
+        transform();
     });
-    console.log($('.profile_box li'))
+
     $('.profile_box > li').eq(0).on('click', function(){
         $('.profile_box').addClass('on');
         $('.content_box').addClass('on');
@@ -25,8 +26,22 @@ $(function () {
         $('.content_box').removeClass('on');
     });
     
-    var liHeight = $('.profile_box > li').innerHeight();
-    console.log(liHeight)
+    transform();
+    
+    function transform(){
+        var liHeight = $('.profile_box > li').innerHeight();
+        var liZ = liHeight/2;
+        var trans1 = 'rotateX(0deg) translateY(0) translateZ('+liZ+'px)';
+        var trans2 = 'rotateX(-90deg) translateY(0) translateZ('+liZ+'px)';
+
+        $('.profile_box > li').eq(0).css({
+            transform: trans1
+        })
+        $('.profile_box > li').eq(1).css({
+            transform: trans2
+        })
+    }
+    
 
     function mousewheel(e) {
         if (e.originalEvent.detail === 0) { // 표준브라우저
